@@ -10,7 +10,7 @@ export default function Nav({ children }) {
     // This handles the nav background becoming solid after scrolling.
     // On displays below sm breakpoint, transparent nav text and hero text overlap.
     // To circumvent, on small displays background will be triggered early.
-    let isLargeDisplay = window.matchMedia("(min-width: 640px)").matches
+    let isLargeDisplay = window.matchMedia("(min-width: 768px)").matches
 
     function handleScroll() {
       const navbarBottom = document
