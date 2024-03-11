@@ -42,36 +42,32 @@ export default function Project({
             </button>
           </form>
           <div className="flex justify-center">
-            {imageSrc && (<figure>
-              <Image
-                src={imageSrc}
-                alt={`Screenshot of ${name}`}
-                height={300}
-                width={500}
-              />
-            </figure>)}
+            {imageSrc && (
+              <figure>
+                <Image
+                  src={imageSrc}
+                  alt={`Screenshot of ${name}`}
+                  height={300}
+                  width={500}
+                />
+              </figure>
+            )}
           </div>
           <div className="prose">
             <h3 className="font-bold text-lg">{name}</h3>
             <p className="py-4">{children}</p>
           </div>
-          <div className="modal-action">
-            <div className="flex justify-end gap-2">
-              {demoLink && (
-                <a className="btn btn-primary" href={demoLink} target="_blank">
-                  View live
-                </a>
-              )}
-              {repoLink && (
-                <a
-                  className="btn btn-secondary"
-                  href={repoLink}
-                  target="_blank"
-                >
-                  View repository
-                </a>
-              )}
-            </div>
+          <div className="modal-action justify-center">
+            {demoLink && (
+              <a className="btn btn-primary" href={demoLink} target="_blank">
+                View live
+              </a>
+            )}
+            {repoLink && (
+              <a className="btn btn-secondary" href={repoLink} target="_blank">
+                View repository
+              </a>
+            )}
           </div>
         </div>
       </dialog>

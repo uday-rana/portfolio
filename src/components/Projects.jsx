@@ -29,7 +29,7 @@ export default function Projects() {
           name="Museum Art Gallery Viewer"
           imageSrc="/artapp.avif"
           demoLink="https://art-app-iota.vercel.app/"
-        >A dynamic Next.js web app for browsing art exhibits from the Metropolitan Museum of Art Collection.</Project>
+        >A dynamic Next.js web app for browsing the art collection from the Metropolitan Museum of Art.</Project>
       </div>
     </div>
   );

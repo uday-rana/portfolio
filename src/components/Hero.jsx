@@ -3,6 +3,7 @@ export default function Hero() {
     <div
       className="hero min-h-screen"
       style={{ backgroundImage: "url(/hero.avif)" }}
+      id="hero"
     >
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content flex-col lg:flex-row text-neutral-content">

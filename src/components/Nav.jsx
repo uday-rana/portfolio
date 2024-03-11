@@ -1,31 +1,86 @@
-/* Changing viewport size breaks smooth scrolling. */
+"use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
 export default function Nav({ children }) {
+  const [isNavbarPastHero, setIsNavbarPastHero] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroBottom = document
+        .querySelector("#hero")
+        .getBoundingClientRect().bottom;
+      const navbarBottom = document
+        .querySelector("#navbar")
+        .getBoundingClientRect().bottom;
+
+      setIsNavbarPastHero(navbarBottom > heroBottom);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="drawer drawer-end">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full sticky top-0 navbar bg-base-300 z-10">
+        <div
+          className={`w-full fixed ${
+            isNavbarPastHero
+              ? "bg-base-300"
+              : "bg-transparent text-neutral-content"
+          } top-0 navbar z-10`}
+          id="navbar"
+        >
           <div className="flex-1 px-2 mx-2 text-xl select-none">Uday Rana</div>
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal gap-2">
-              {/* Navbar menu content here */}
+              {/* Navbar menu content */}
               <li>
-                <Link href="#top">Home</Link>
+                <Link
+                  href="#top"
+                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="#experience">Experience</Link>
+                <Link
+                  href="#experience"
+                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                >
+                  Experience
+                </Link>
               </li>
               <li>
-                <Link href="#education">Education</Link>
+                <Link
+                  href="#education"
+                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                >
+                  Education
+                </Link>
               </li>
               <li>
-                <Link href="#projects">Projects</Link>
+                <Link
+                  href="#projects"
+                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                >
+                  Projects
+                </Link>
               </li>
               <li>
-                <Link href="#about">About</Link>
+                <Link
+                  href="#about"
+                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                >
+                  About
+                </Link>
               </li>
             </ul>
           </div>
@@ -62,22 +117,62 @@ export default function Nav({ children }) {
           className="drawer-overlay"
         ></label>
         <ul className="menu p-4 w-80 min-h-full bg-base-200 justify-center text-lg">
-          {/* Sidebar content here */}
-          {/* Setting tabindex to -1 breaks smooth scrolling so don't do that for the navigation. */}
+          {/* Sidebar content */}
+          {/* Setting tabindex to -1 for these drawer Links breaks smooth scrolling when using them. */}
           <li>
-            <Link href="#top" className="py-5 justify-center">Home</Link>
+            <Link
+              href="#top"
+              className="py-5 justify-center"
+              onClick={() => {
+                document.querySelector("#my-drawer").checked = false;
+              }}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="#experience" className="py-5 justify-center">Experience</Link>
+            <Link
+              href="#experience"
+              className="py-5 justify-center"
+              onClick={() => {
+                document.querySelector("#my-drawer").checked = false;
+              }}
+            >
+              Experience
+            </Link>
           </li>
           <li>
-            <Link href="#education" className="py-5 justify-center">Education</Link>
+            <Link
+              href="#education"
+              className="py-5 justify-center"
+              onClick={() => {
+                document.querySelector("#my-drawer").checked = false;
+              }}
+            >
+              Education
+            </Link>
           </li>
           <li>
-            <Link href="#projects" className="py-5 justify-center">Projects</Link>
+            <Link
+              href="#projects"
+              className="py-5 justify-center"
+              onClick={() => {
+                document.querySelector("#my-drawer").checked = false;
+              }}
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <Link href="#about" className="py-5 justify-center">About</Link>
+            <Link
+              href="#about"
+              className="py-5 justify-center"
+              onClick={() => {
+                document.querySelector("#my-drawer").checked = false;
+              }}
+            >
+              About
+            </Link>
           </li>
         </ul>
       </div>
