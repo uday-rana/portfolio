@@ -7,7 +7,7 @@ export default function Nav({ children }) {
   const [isNavbarPastHero, setIsNavbarPastHero] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    function handleScroll() {
       const heroBottom = document
         .querySelector("#hero")
         .getBoundingClientRect().bottom;
@@ -16,7 +16,7 @@ export default function Nav({ children }) {
         .getBoundingClientRect().bottom;
 
       setIsNavbarPastHero(navbarBottom > heroBottom);
-    };
+    }
 
     window.addEventListener("scroll", handleScroll);
 
@@ -48,7 +48,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#top"
                   className={
-                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                    isNavbarPastHero ? "" : "focus:text-neutral-content"
                   }
                 >
                   Home
@@ -58,7 +58,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#experience"
                   className={
-                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                    isNavbarPastHero ? "" : "focus:text-neutral-content"
                   }
                 >
                   Experience
@@ -68,7 +68,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#education"
                   className={
-                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                    isNavbarPastHero ? "" : "focus:text-neutral-content"
                   }
                 >
                   Education
@@ -78,7 +78,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#projects"
                   className={
-                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                    isNavbarPastHero ? "" : "focus:text-neutral-content"
                   }
                 >
                   Projects
@@ -88,7 +88,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#about"
                   className={
-                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                    isNavbarPastHero ? "" : "focus:text-neutral-content"
                   }
                 >
                   About
