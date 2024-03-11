@@ -31,7 +31,7 @@ export default function Nav({ children }) {
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
         <div
-          className={`w-full fixed ${
+          className={`w-full fixed transition-colors ${
             isNavbarPastHero
               ? "bg-base-300"
               : "bg-transparent text-neutral-content"
