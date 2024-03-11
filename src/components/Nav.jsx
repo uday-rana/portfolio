@@ -42,10 +42,14 @@ export default function Nav({ children }) {
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal gap-2">
               {/* Navbar menu content */}
+              {/* Using && or || to resolve className results in the booleans being passed
+              as classNames and it throws an error, hence the use of the ternary operator. */}
               <li>
                 <Link
                   href="#top"
-                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                  className={
+                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                  }
                 >
                   Home
                 </Link>
@@ -53,7 +57,9 @@ export default function Nav({ children }) {
               <li>
                 <Link
                   href="#experience"
-                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                  className={
+                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                  }
                 >
                   Experience
                 </Link>
@@ -61,7 +67,9 @@ export default function Nav({ children }) {
               <li>
                 <Link
                   href="#education"
-                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                  className={
+                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                  }
                 >
                   Education
                 </Link>
@@ -69,7 +77,9 @@ export default function Nav({ children }) {
               <li>
                 <Link
                   href="#projects"
-                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                  className={
+                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                  }
                 >
                   Projects
                 </Link>
@@ -77,7 +87,9 @@ export default function Nav({ children }) {
               <li>
                 <Link
                   href="#about"
-                  className={isNavbarPastHero || "focus:text-neutral-content"}
+                  className={
+                    isNavbarPastHero ? "focus:text-neutral-content" : ""
+                  }
                 >
                   About
                 </Link>
