@@ -4,24 +4,47 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Nav({ children }) {
-  const [isNavbarPastHero, setIsNavbarPastHero] = useState(false);
+  const [isNavbarPastTarget, setIsNavbarPastTarget] = useState(false);
 
   useEffect(() => {
+    // This handles the nav background becoming solid after scrolling.
+    // On displays below sm breakpoint, transparent nav text and hero text overlap.
+    // To circumvent, on small displays background will be triggered early.
+    let isLargeDisplay = window.matchMedia("(min-width: 640px)").matches
+
     function handleScroll() {
-      const heroBottom = document
-        .querySelector("#hero")
-        .getBoundingClientRect().bottom;
       const navbarBottom = document
         .querySelector("#navbar")
         .getBoundingClientRect().bottom;
 
-      setIsNavbarPastHero(navbarBottom > heroBottom);
+      let trigger;
+
+      if (isLargeDisplay) {
+        trigger = document
+          .querySelector("#hero")
+          .getBoundingClientRect().bottom;
+      } else {
+        trigger = document
+          .querySelector("#herotext")
+          .getBoundingClientRect().top;
+      }
+
+      setIsNavbarPastTarget(navbarBottom > trigger);
     }
 
-    window.addEventListener("scroll", handleScroll);
+    if (isLargeDisplay) {
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      window.addEventListener("scroll", handleScroll);
+    }
+
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (isLargeDisplay) {
+        window.removeEventListener("scroll", ()=>{handleScroll("#hero")});
+      } else {
+        window.removeEventListener("scroll", ()=>{handleScroll("#herotext")});
+      }
     };
   }, []);
 
@@ -32,7 +55,7 @@ export default function Nav({ children }) {
         {/* Navbar */}
         <div
           className={`w-full fixed transition-colors ${
-            isNavbarPastHero
+            isNavbarPastTarget
               ? "bg-base-300"
               : "bg-transparent text-neutral-content"
           } top-0 navbar z-10`}
@@ -48,7 +71,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#top"
                   className={
-                    isNavbarPastHero ? "" : "focus:text-neutral-content"
+                    isNavbarPastTarget ? "" : "focus:text-neutral-content"
                   }
                 >
                   Home
@@ -58,7 +81,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#experience"
                   className={
-                    isNavbarPastHero ? "" : "focus:text-neutral-content"
+                    isNavbarPastTarget ? "" : "focus:text-neutral-content"
                   }
                 >
                   Experience
@@ -68,7 +91,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#education"
                   className={
-                    isNavbarPastHero ? "" : "focus:text-neutral-content"
+                    isNavbarPastTarget ? "" : "focus:text-neutral-content"
                   }
                 >
                   Education
@@ -78,7 +101,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#projects"
                   className={
-                    isNavbarPastHero ? "" : "focus:text-neutral-content"
+                    isNavbarPastTarget ? "" : "focus:text-neutral-content"
                   }
                 >
                   Projects
@@ -88,7 +111,7 @@ export default function Nav({ children }) {
                 <Link
                   href="#about"
                   className={
-                    isNavbarPastHero ? "" : "focus:text-neutral-content"
+                    isNavbarPastTarget ? "" : "focus:text-neutral-content"
                   }
                 >
                   About

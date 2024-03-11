@@ -6,7 +6,7 @@ export default function Hero() {
       id="hero"
     >
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content flex-col lg:flex-row text-neutral-content">
+      <div className="hero-content flex-col lg:flex-row text-neutral-content" id="herotext">
         <div className="max-w-md">
           <p>Hi, I&apos;m</p>
           <h1 className="mb-5 text-5xl font-bold">Uday Rana.</h1>
