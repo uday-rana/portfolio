@@ -17,7 +17,6 @@ export default function Hero() {
           </p>
           <div className="flex gap-2">
             <a href="mailto:bc4w46yd7@mozmail.com" className="btn btn-primary">Contact me</a>
-            <a href="/resume.pdf" download className="btn btn-secondary">View resume</a>
           </div>
         </div>
       </div>
