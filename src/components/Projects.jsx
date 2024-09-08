@@ -21,7 +21,7 @@ export default function Projects() {
           id={2}
           name="Blog Engine"
           imageSrc="/blog.avif"
-          demoLink="https://usrana-blog.cyclic.app/"
+          demoLink="https://blog-cer3.onrender.com/blog"
           repoLink="https://github.com/uday-rana/blog"
         >A blog engine allowing users to sign up and publish posts.</Project>
         <Project
