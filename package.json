@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "daisyui": "^4.12.24",
     "eslint": "^8",
     "eslint-config-next": "14.2.24",
