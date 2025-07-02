@@ -45,6 +45,7 @@ export default function Projects() {
           name="RPG Content Hub"
           repoLink="https://github.com/tabletop-generator"
           demoLink="https://ttg-client-web.tabletop-generator.workers.dev"
+          imageSrc="/rpg-content-hub-screenshot.avif"
         >
           A social platform for generating and discovering AI-generated content
           for role-playing games for inspiration and quick iteration.
