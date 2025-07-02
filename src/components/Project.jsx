@@ -65,7 +65,7 @@ export default function Project({
             )}
             {repoLink && (
               <a className="btn btn-secondary" href={repoLink} target="_blank">
-                View repository
+                View on GitHub
               </a>
             )}
           </div>
