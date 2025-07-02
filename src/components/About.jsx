@@ -7,22 +7,19 @@ export default function About() {
         </div>
         <div>
           <p>
-            Hi there! I&apos;m Uday, a software developer with a passion for
-            learning and exploring new opportunities. I thrive on versatility
-            and enjoy tackling a wide range of challenges. I approach each
-            project with curiosity and enthusiasm, always eager to learn and
-            grow. I believe in the power of collaboration and effective
-            communication to drive success.
+            Hi! I&apos;m Uday, a software developer with a passion for learning
+            and exploring new opportunities. I thrive on versatility and enjoy
+            tackling a wide range of challenges. I approach each project with
+            curiosity and enthusiasm, always eager to learn and grow. I believe
+            in the power of collaboration and effective communication to drive
+            success.
             <br />
-						<br />
+            <br />
             Whether it&apos;s software development or design, I&apos;m committed
             to delivering high-quality work and making a positive impact.
-            Outside of work, you can find me working on music or playing chess.
-						<br />
-            <br />
             Let&apos;s connect and chat about how we can work together to bring
-            your ideas to life! Feel free to reach out to me via e-mail or
-            check out some of my projects.
+            your ideas to life! Feel free to reach out to me via e-mail or check
+            out some of my projects.
           </p>
         </div>
       </div>
