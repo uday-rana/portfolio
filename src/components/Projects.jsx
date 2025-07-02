@@ -66,7 +66,7 @@ export default function Projects() {
             <li>Designed scalable RESTful API architecture with complete OpenAPI specification, rate limiting, CORS protection, and comprehensive logging</li>
             <li>Created responsive, accessible UI with TailwindCSS optimized for both content creation and social interaction workflows</li>
           </ul>
-          <strong>Technologies:</strong> TypeScript, Next.js, Express, Prisma, PostgreSQL, Supabase, Cloudflare Workers AI, Docker, TailwindCSS, AWS S3, GitHub Actions 
+          <strong>Technologies:</strong> TypeScript, Next.js, Express, Docker, TailwindCSS, GitHub Actions, PostgreSQL, AWS S3, Supabase, Cloudflare Workers AI
         </Project>
 
         <Project
