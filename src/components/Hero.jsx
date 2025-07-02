@@ -6,7 +6,10 @@ export default function Hero() {
       id="hero"
     >
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content flex-col lg:flex-row text-neutral-content" id="herotext">
+      <div
+        className="hero-content flex-col lg:flex-row text-neutral-content"
+        id="herotext"
+      >
         <div className="max-w-md">
           <p>Hi, I&apos;m</p>
           <h1 className="mb-5 text-5xl font-bold">Uday Rana.</h1>
@@ -16,7 +19,9 @@ export default function Hero() {
             opportunities to learn something new and to challenge myself.
           </p>
           <div className="flex gap-2">
-            <a href="mailto:bc4w46yd7@mozmail.com" className="btn btn-primary">Contact me</a>
+            <a href="mailto:bc4w46yd7@mozmail.com" className="btn btn-primary">
+              Contact me
+            </a>
           </div>
         </div>
       </div>

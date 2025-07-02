@@ -15,7 +15,7 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: ["lofi", "business"]
+    themes: ["lofi", "business"],
   },
-  plugins: [require('@tailwindcss/typography'), require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };
