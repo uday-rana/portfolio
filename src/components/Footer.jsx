@@ -1,5 +1,4 @@
 import Image from "next/image";
-import githubLogo from "@/../public/github-mark-white.svg";
 
 export default function Footer() {
   return (
@@ -9,7 +8,10 @@ export default function Footer() {
       </aside>
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <a href="https://www.github.com/uday-rana" target="_blank">
-          <Image src={githubLogo} alt="GitHub logo" height={24} width={24} />
+          <Image src="/github-mark-white.svg" alt="GitHub logo" height={24} width={24} />
+        </a>
+        <a href="https://www.linkedin.com/in/uday-rana" target="_blank">
+          <Image className="invert" src="/linkedin.svg" alt="LinkedIn logo" height={24} width={24} />
         </a>
       </nav>
     </footer>
