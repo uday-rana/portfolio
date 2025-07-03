@@ -73,6 +73,7 @@ export default function Projects() {
           id={3}
           name="Order Management API"
           repoLink="https://github.com/uday-rana/order-service"
+          imageSrc="/order-service-architecture-diagram.avif"
         >
           <strong>An order management web service built with modern .NET architecture</strong>
           <br />
