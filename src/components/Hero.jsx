@@ -19,7 +19,7 @@ export default function Hero() {
             opportunities to learn something new and to challenge myself.
           </p>
           <div className="flex gap-2">
-            <a href="mailto:bc4w46yd7@mozmail.com" className="btn btn-primary">
+            <a href="mailto:lsh4nlryi@mozmail.com" className="btn btn-primary">
               Contact me
             </a>
           </div>
