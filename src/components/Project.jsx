@@ -17,12 +17,12 @@ export default function Project({
         onClick={() => document.getElementById(`my_modal_${id}`).showModal()}
       >
         {imageSrc && (
-          <figure className="mb-0">
+          <figure className="relative mb-0 min-h-48">
             <Image
               src={imageSrc}
               alt={`Screenshot of ${name}`}
-              height={300}
-              width={500}
+              fill
+              className="object-cover"
             />
           </figure>
         )}
