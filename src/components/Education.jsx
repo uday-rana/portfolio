@@ -22,22 +22,24 @@ export default function Education() {
                 className="no-underline hover:text-neutral-400"
                 target="_blank"
               >
-                Computer Programming &amp; Analysis
+                Computer Programming &amp; Analysis (High Honours)
               </a>
             </h4>
           </div>
           <div>
             <p className="prose prose-sm my-0">
-              <span className="whitespace-nowrap">2022 Jan -</span> 2025 Apr
+              <span className="whitespace-nowrap">GPA: 4.0 | </span><span className="whitespace-nowrap">2022 Jan -</span> 2025 Apr
             </p>
           </div>
         </div>
         <p>
           <strong>Courses</strong>
           <br />
+          Cloud Computing for Programmers, Open Source Development, Open Source Development Project,
+          Introduction to DevOps, Application Development, Android App Development, Computer Vision, Project Planning & Management, 
           Data Structures and Algorithms, Web Programming for Apps & Services,
           Advanced Database Services, Software Analysis and Design,
-          Object-oriented Software Development using C++, Web Programming Tools
+          Object-Oriented Software Development Using C++, Web Programming Tools
           and Frameworks, Introduction to C, Introduction to Unix/Linux,
           Introduction to Object-oriented Programming, Web Programming
           Principles, Introduction to Database Systems
